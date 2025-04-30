@@ -1,5 +1,5 @@
 site:
-  title: "Datanexions Docs"
+  title: Datanexions Docs
   start_page: streams::index.adoc
 
 content:
@@ -9,7 +9,7 @@ content:
 
 ui:
   bundle:
-    url: ./antora-ui-default/build/ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=build
 
 output:
   dir: ./build/site
