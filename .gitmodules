@@ -1,6 +1,3 @@
-[submodule "antora-ui-default"]
-	path = antora-ui-default
-	url = https://gitlab.com/ton-compte/antora-ui-default.git
 [submodule "docs/streams"]
 	path = docs/streams
 	url = git@github.com:Datanexions/streams-docs.git
