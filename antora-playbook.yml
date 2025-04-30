@@ -5,7 +5,7 @@ site:
 content:
   sources:
     - url: ./docs/streams
-      branches: HEAD
+      branches: main
 
 ui:
   bundle:
