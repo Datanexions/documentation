@@ -9,7 +9,7 @@ content:
 
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=build
+    url: ./antora-ui-default/build/ui-bundle.zip
 
 output:
   dir: ./build/site
