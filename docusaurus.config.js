@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Empowering Businesses with ',
+  title: 'Documentation Home',
+  tagline: 'Empowering Businesses Through Data Solutions, Expertise, and Collaboration',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -24,6 +24,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Datanexions', // Usually your GitHub org/user name.
   projectName: 'documentation', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
   onBrokenLinks: 'throw',
@@ -77,12 +78,30 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Datanexions',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Documnentation portal for Datanexions products',
+          src: 'img/datanexions_logo.svg',
         },
         items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'streamsSidebar',
+            position: 'left',
+            label: 'Streams',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'connectSidebar',
+            position: 'left',
+            label: 'Connect',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'bookingsSidebar',
+            position: 'left',
+            label: 'Bookings',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
