@@ -13,3 +13,4 @@ This page explains how to configure a stream:
 - Manage scheduling and execution
 
 Configuration files are written in JSON and validated against the Streams schema.
+
