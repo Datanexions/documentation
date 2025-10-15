@@ -1,4 +1,4 @@
-# Streams CLI - User Manual, Configure
+# Configure
 
 ## Overview
 This document describes what users should do to proceed in their **Data Management** journey with `Streams by Datanexions`, CLI version.
@@ -10,11 +10,11 @@ Hence, this document goes through the different files a `CLI version` user manag
 ## Folder Organization
 In `README.md`, all command line options are explained. They won't be explained again in current document. Conversely, it's important to decribe the content of each file that the user will have to modify or create.
 
-Under `streams-<version>-cli/` folder extracted from `streams-&lt;version&lt;-cli.zip`file, there is a template `myStreamsEnvironment/`folder, provided for starting your `Data Management` environment, dedicated to a specific `Target Database`.
+Under `streams-<version>-cli/` folder extracted from `streams-<version>-cli.zip`file, there is a template `myStreamsEnvironment/`folder, provided for starting your `Data Management` environment, dedicated to a specific `Target Database`.
 It can be renamed and copied anywhere in your file system.
 
-We will call `&lt;environmentFolderPath&lt;` the full file system path to that folder, and `&lt;environment folder&lt;`the name of the folder itself, what ever the name you decide to give. The following structure showd all sub-folders and, properties and configuration files, that may exist through time :
-```text
+We will call `<environmentFolderPath>` the full file system path to that folder, and `<environment folder>`the name of the folder itself, what ever the name you decide to give. The following structure showd all sub-folders and, properties and configuration files, that may exist through time :
+<pre>
 &lt;environment folder&gt;/
     environment.json
     target.connection.json
@@ -56,34 +56,34 @@ We will call `&lt;environmentFolderPath&lt;` the full file system path to that f
             ...
     &lt;project N folder&gt;/
             ...
-
+</pre>
 
 ### Explanation of Key Elements:
-- **`&lt;environment folder&lt;/`**: The home directory of projects aiming a specific target database.
+- **`<environment folder>/`**: The home directory of projects aiming a specific target database.
 - **`environment.json`**: The configuration file for the target database. It contains its type and sub-type.
 - **`target.connection.json`**: It contains detailed settings for connecting to the target database.
-- **`&lt;project n folder&lt;/`**: Those folders holds Streams content regarding a functional subset of your data journey for the target database.
+- **`<project n folder>/`**: Those folders holds Streams content regarding a functional subset of your data journey for the target database.
 - **`project.json`**: The configuration file for the (buckets, scopes and collections)/(databases, instances and tables)/etc in the target database, for storing metadata (data models) and data.
 
-## Root Content of `&lt;environment folder&lt;/`
+## Root Content of `<environment folder>/`
 
 ### environment.json
 
-```json
+```
 {
   "TARGET_DATABASE" : {
     "DATABASE_TYPE" : "NOSQL",
     "DATABASE_NAME" : "&lt;NOSQLDATABASE&gt;"
   }
 }
-
-Values for `&lt;NOSQLDATABASE&lt;` are: **CASSANDRA, COUCHBASE, or MONGODB**.
+```
+Values for `<NOSQLDATABASE>` are: **CASSANDRA, COUCHBASE, or MONGODB**.
 
 ### target.connection.json
 
-if `&lt;NOSQLDATABASE&lt;` is **CASSANDRA** :
+if `<NOSQLDATABASE>` is **CASSANDRA** :
 
-```json
+```
 {
   "datacenter": "&lt;DATACENTER&gt;",
   "contactPoints": ["&lt;LIST_OF_NODES&gt;"],
@@ -92,53 +92,55 @@ if `&lt;NOSQLDATABASE&lt;` is **CASSANDRA** :
   "username": "&lt;LOGIN&gt;",
   "password": "&lt;PASS&gt;"
 }
+```
 
-if `&lt;NOSQLDATABASE&lt;` is **COUCHBASE** :
+if `<NOSQLDATABASE>` is **COUCHBASE** :
 
-```json
+```
 {
   "cluster_address" : "couchbase://&lt;IP_ADDRESS&gt;",
   "username" : "&lt;LOGIN&gt;",
   "password" : "&lt;PASS&gt;"
 }
+```
 
 
-if `&lt;NOSQLDATABASE&lt;` is **MONGODB** :
+if `<NOSQLDATABASE>` is **MONGODB** :
 
-```json
+```
 {
   "cluster_address" : "mongodb://&lt;SERVER_IP&gt;:27017",
   "database" : "&lt;DATABASE&gt;",
   "username" : "&lt;LOGIN&gt;",
   "password" : "&lt;PASS&gt;"
 }
+```
 
-
-### config/glossary.`&lt;glossaryGlobalUniqueName&lt;`.json
+### config/glossary.`<glossaryGlobalUniqueName>`.json
 
 ### config/variants.json
 
 ### config/objects.json
 
-## Content of `&lt;project folder&lt;/`
+## Content of `projects/<project folder>/`
 
-### `&lt;project folder&lt;/`project.json
+### `<project folder>/`project.json
 
-if `&lt;NOSQLDATABASE&lt;` is CASSANDRA :
+if `<NOSQLDATABASE>` is CASSANDRA :
 - Data model location : target `table`must be defined.
 - Data location : nothing has to be defined.
-<pre>
+```
 {
   "model" : {
     "table" : "&lt;TABLE_NAME&gt;"
   }
 }
-</pre>
+```
 
-if `&lt;NOSQLDATABASE&lt;` is COUCHBASE :
+if `<NOSQLDATABASE>` is COUCHBASE :
 - Data model location : target `bucket`,`scope`and `collection`must be defined.
 - Data location : target `bucket`and `scope` must be defined.
-<pre>
+```
 {
   "data" : {
     "bucket" : "&lt;TARGET_BUCKET&gt;",
@@ -150,41 +152,41 @@ if `&lt;NOSQLDATABASE&lt;` is COUCHBASE :
     "collection" : "&lt;TARGET_COLLECTION&gt;"
   }
 }
-</pre>
+```
 
-if `&lt;NOSQLDATABASE&lt;` is MONGODB :
+if `<NOSQLDATABASE>` is MONGODB :
 - Data model location : target `collection`must be defined.
 - Data location : nothing has to be defined.
-<pre>
+```
 {
   "model" : {
     "collection" : "&lt;COLLECTION_NAME&gt;"
   }
 }
-</pre>
+```
 
-### `&lt;project folder&lt;/`config/`&lt;connectionName&lt;`.connection.json
+### `<project folder>/`config/`<connectionName>`.connection.json
 
 This properties file describes the connection properties necessary to connect to a source, to which connectionName label will be attached to.
 
-<pre>
+```
 connectionName=&lt;connectionName&gt;
 connectionType=&lt;streamsListedConnectionType&gt;
 &lt;additional parameters&gt;
-</pre>
+```
 
-`&lt;additional parameters&lt;` depends on the data source type. Refer to `CONNECTIONS.md`for their values.
+`<additional parameters>` depends on the data source type. Refer to `CONNECTIONS.md`for their values.
 
-### `&lt;project folder&lt;/`config/`&lt;connectionName&lt;`.scope.json
+### `<project folder>/`config/`<connectionName>`.scope.json
 
-This properties file describes the data model of all data content the user wants to retrieve from source database described in `&lt;connectionName&lt;.connection.josn`.
+This properties file describes the data model of all data content the user wants to retrieve from source database described in `<connectionName>.connection.josn`.
 
 its content depends on the data source type. Refer to `CONNECTIONS.md`for it's description.
 
 
-### `&lt;project folder&lt;/`config/`&lt;connectionName&lt;`.stream.`&lt;streamName&lt;`.json
+### `<project folder>/`config/`<connectionName>`.stream.`<streamName>`.json
 
-<pre>
+```
 {
     &lt;specific sections&gt;
     "columns" : [
@@ -197,12 +199,12 @@ its content depends on the data source type. Refer to `CONNECTIONS.md`for it's d
         &lt;List of {object update definition}&gt;
     ]
 }
-</pre>
+```
 
 
-### `&lt;project folder&lt;/`config/glossary.`&lt;glossaryLocalUniqueName&lt;`.json
+### `<project folder>/`config/glossary.`<glossaryLocalUniqueName>`.json
 
-<pre>
+```
 {
     "entries" : [
         &lt;List of "entry" :{entry definition}&gt;
@@ -211,11 +213,12 @@ its content depends on the data source type. Refer to `CONNECTIONS.md`for it's d
         &lt;List of "rules" :{rules definition}&gt;
     ]
 }
-</pre>
+```
 
-### `&lt;project folder&lt;/`config/variants.json
+### `<project folder>/`config/variants.json
 
-### `&lt;project folder&lt;/`config/objects.json
+### `<project folder>/`config/objects.json
 
 ## Support
 For any issues, questions, or feedback, please contact the **Datanexions support team** at [support@datanexions.com](mailto:support@datanexions.com).
+
