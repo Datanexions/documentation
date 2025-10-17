@@ -20,20 +20,12 @@ const sidebars = {
   streamsSidebar: [
     { type: 'doc', id: 'streams/intro', label: 'Introduction' },
     { type: 'doc', id: 'streams/configuration', label: 'Configuration' },
-    { type: 'doc', id: 'streams/examples', label: 'Examples' },
     { type: 'doc', id: 'streams/connections', label: 'Connections' },
     { type: 'doc', id: 'streams/create_connector', label: 'Create Connector' },
     { type: 'doc', id: 'streams/glossary', label: 'Glossary' },
-    { type: 'doc', id: 'streams/streams_part1', label: 'Streams Part 1' },
-    { type: 'doc', id: 'streams/streams_part2', label: 'Streams Part 2' },
-    {
-      type: 'category',
-      label: 'DSL',
-      items: [
-        'streams/dsl/dsl-overview',
-        'streams/dsl/dsl-syntax',
-      ],
-    }
+    { type: 'doc', id: 'streams/streams_part_1', label: 'Streams Part 1' },
+    { type: 'doc', id: 'streams/streams_part_2', label: 'Streams Part 2' },
+
   ],
   connectSidebar: [
       'connect/intro',

@@ -1,3 +1,5 @@
+# Glossary
+
 ## Glossary  Files
 
 `<environment folder>/config/glossary.<globalLabel>`.json file  and `<project folder>/config/glossary.<localLabel>`.json file describes glossaries respectively

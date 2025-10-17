@@ -1,3 +1,5 @@
+# Streams Part 2
+
 ## Streams configuration Files
 
 `<project folder>/config/<connectionName>.stream.<streamName>.json` file describes

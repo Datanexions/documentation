@@ -12,14 +12,14 @@ cp -r streams-core streams-connector-hubspot
 
 In the new streams-connector-hubspot folder, apply the following changes:
 
-### Modify the project name in pom.xml:
+### Modify the project name in pom.xml
 ```xml
 <artifactId>streams-connector-hubspot</artifactId>
 <name>Streams Connector - HubSpot</name>
 <description>Connector for HubSpot API v3 using OAuth2 or API key</description>
 ```
 
-### 2.2 Adapt the Java package:
+### Adapt the Java package
 
 In the src/main/java folder, change the package from org.datanexions.streams to org.datanexions.connectors.hubspot. For example:
 ```bash

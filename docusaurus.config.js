@@ -81,7 +81,7 @@ const config = {
         title: 'Datanexions',
         logo: {
           alt: 'Documnentation portal for Datanexions products',
-          src: 'img/datanexions_logo.svg',
+          src: 'img/datanexions_logo.png',
         },
         items: [
           {
@@ -89,30 +89,6 @@ const config = {
             sidebarId: 'streamsSidebar',
             position: 'left',
             label: 'Streams',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'connectSidebar',
-            position: 'left',
-            label: 'Connect',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'bookingsSidebar',
-            position: 'left',
-            label: 'Bookings',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
           },
         ],
       },
