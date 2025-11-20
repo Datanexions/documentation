@@ -8,7 +8,7 @@
 - filtering that may apply on retrieved data, with **condition** key,
 - what data is used for on target objects, with **create** and **update** keys.
 
-```
+```json
 {
     <specific sections>,
     "columns": [
@@ -36,7 +36,7 @@ In current document, we will describe
 Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
 
 ### Flat Files
-```
+```json
 {
   "connection": "repoFiles",
   "table": "produits",
@@ -48,7 +48,7 @@ Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
 ...
 ```
 ### Database Flat Files
-```
+```json
 {
   "connection": "crmFiles",
   "schema": "CRM",
@@ -62,7 +62,7 @@ Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
 ...
 ```
 ### SQL Database
-```
+```json
 {
     "connection": "cs_contrats_mav",
     "table": "contrat",
@@ -82,7 +82,7 @@ Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
 ...
 ```
 ### MongoDB Database
-```
+```json
 {
   "connection": "mongodb",
   "table": "myCollecton",
@@ -107,7 +107,7 @@ Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
 ...
 ```
 ### Cassandra Database
-```
+```json
 {
   "connection": "cassandra",
   "table": "hobbies",
@@ -118,7 +118,7 @@ Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
 ...
 ```
 ### REST API Source
-```
+```json
 {
   "connection": "amadeus",
   "table": "flight_offers",
@@ -137,5 +137,3 @@ Refer to `STREAMS_PART2.md` for details about **create** and **update** keys.
   ],
 ...
 ```
-## Support
-For any issues, questions, or feedback, please contact the **Datanexions support team** at [support@datanexions.com](mailto:support@datanexions.com).

@@ -14,49 +14,47 @@ Under `streams-<version>-cli/` folder extracted from `streams-<version>-cli.zip`
 It can be renamed and copied anywhere in your file system.
 
 We will call `<environmentFolderPath>` the full file system path to that folder, and `<environment folder>`the name of the folder itself, what ever the name you decide to give. The following structure showd all sub-folders and, properties and configuration files, that may exist through time :
-<pre>
-&lt;environment folder&gt;/
-    environment.json
-    target.connection.json
-    config/
-        glossary.&lt;globalLabel&gt;.json
-        variants.json
-        objects.json
-    &lt;project folder&gt;/
-        project.json
-        dsl/
-            &lt;connection 1 Name&gt;.&lt;streamName1&gt;.dsl
-            &lt;connection 1 Name&gt;.&lt;streamName2&gt;.dsl
-            ...
-            &lt;connection 1 Name&gt;.&lt;streamNameN&gt;.dsl
-            &lt;connection 2 Name&gt;.&lt;streamName1&gt;.dsl
-            &lt;connection 2 Name&gt;.&lt;streamName2&gt;.dsl
-            ...
-            &lt;connection 2 Name&gt;.&lt;streamNameN&gt;.dsl
-        config/
-            glossary.&lt;localLabel&gt;.json
-            variants.json
-            objects.json
-            &lt;connection 1 Name&gt;.connection.json
-            &lt;connection 1 Name&gt;.scope.json
-            &lt;connection 1 Name&gt;.stream.&lt;streamName1&gt;.json
-            &lt;connection 1 Name&gt;.stream.&lt;streamName2&gt;.json
-            ...
-            &lt;connection 1 Name&gt;.stream.&lt;streamNameN&gt;.json
-
-            &lt;connection 2 Name&gt;.connection.json
-            &lt;connection 2 Name&gt;.scope.json
-            &lt;connection 2 Name&gt;.stream.&lt;streamName1&gt;.json
-            &lt;connection 2 Name&gt;.stream.&lt;streamName2&gt;.json
-            ...
-            &lt;connection 2 Name&gt;.stream.&lt;streamNameN&gt;.json
-
-            ...
-    &lt;project 2 folder&gt;/
-            ...
-    &lt;project N folder&gt;/
-            ...
-</pre>
+```text
+└── <environment folder>/
+    ├── environment.json
+    ├── target.connection.json
+    ├── config/
+    │   ├── glossary.<globalLabel>.json
+    │   ├── variants.json
+    │   └── objects.json
+    ├── <project folder>/
+    │   ├── project.json
+    │   ├── dsl/
+    │   │   ├── <connection 1 Name>.<streamName1>.dsl
+    │   │   ├── <connection 1 Name>.<streamName2>.dsl
+    │   │   ├── ...
+    │   │   ├── <connection 1 Name>.<streamNameN>.dsl
+    │   │   ├── <connection 2 Name>.<streamName1>.dsl
+    │   │   ├── <connection 2 Name>.<streamName2>.dsl
+    │   │   ├── ...
+    │   │   └── <connection 2 Name>.<streamNameN>.dsl
+    │   └── config/
+    │       ├── glossary.<localLabel>.json
+    │       ├── variants.json
+    │       ├── objects.json
+    │       ├── <connection 1 Name>.connection.json
+    │       ├── <connection 1 Name>.scope.json
+    │       ├── <connection 1 Name>.stream.<streamName1>.json
+    │       ├── <connection 1 Name>.stream.<streamName2>.json
+    │       ├── ...
+    │       ├── <connection 1 Name>.stream.<streamNameN>.json
+    │       ├── <connection 2 Name>.connection.json
+    │       ├── <connection 2 Name>.scope.json
+    │       ├── <connection 2 Name>.stream.<streamName1>.json
+    │       ├── <connection 2 Name>.stream.<streamName2>.json
+    │       ├── ...
+    │       ├── <connection 2 Name>.stream.<streamNameN>.json
+    │       └── ...
+    ├── <project 2 folder>/
+    │   └── ...
+    └── <project N folder>/
+        └── ...
+```
 
 ### Explanation of Key Elements:
 - **`<environment folder>/`**: The home directory of projects aiming a specific target database.
@@ -69,11 +67,11 @@ We will call `<environmentFolderPath>` the full file system path to that folder,
 
 ### environment.json
 
-```
+```json
 {
   "TARGET_DATABASE" : {
     "DATABASE_TYPE" : "NOSQL",
-    "DATABASE_NAME" : "&lt;NOSQLDATABASE&gt;"
+    "DATABASE_NAME" : "<NOSQLDATABASE>"
   }
 }
 ```
@@ -83,36 +81,36 @@ Values for `<NOSQLDATABASE>` are: **CASSANDRA, COUCHBASE, or MONGODB**.
 
 if `<NOSQLDATABASE>` is **CASSANDRA** :
 
-```
+```json
 {
-  "datacenter": "&lt;DATACENTER&gt;",
-  "contactPoints": ["&lt;LIST_OF_NODES&gt;"],
-  "port": &lt;PORT_NUMBER&gt;,
-  "keyspace": "&lt;KEYSPACE&gt;",
-  "username": "&lt;LOGIN&gt;",
-  "password": "&lt;PASS&gt;"
+  "datacenter": "<DATACENTER>",
+  "contactPoints": ["<LIST_OF_NODES>"],
+  "port": <PORT_NUMBER>,
+  "keyspace": "<KEYSPACE>",
+  "username": "<LOGIN>",
+  "password": "<PASS>"
 }
 ```
 
 if `<NOSQLDATABASE>` is **COUCHBASE** :
 
-```
+```json
 {
-  "cluster_address" : "couchbase://&lt;IP_ADDRESS&gt;",
-  "username" : "&lt;LOGIN&gt;",
-  "password" : "&lt;PASS&gt;"
+  "cluster_address" : "couchbase://<IP_ADDRESS>",
+  "username" : "<LOGIN>",
+  "password" : "<PASS>"
 }
 ```
 
 
 if `<NOSQLDATABASE>` is **MONGODB** :
 
-```
+```json
 {
-  "cluster_address" : "mongodb://&lt;SERVER_IP&gt;:27017",
-  "database" : "&lt;DATABASE&gt;",
-  "username" : "&lt;LOGIN&gt;",
-  "password" : "&lt;PASS&gt;"
+  "cluster_address" : "mongodb://<SERVER_IP>:27017",
+  "database" : "<DATABASE>",
+  "username" : "<LOGIN>",
+  "password" : "<PASS>"
 }
 ```
 
@@ -129,10 +127,10 @@ if `<NOSQLDATABASE>` is **MONGODB** :
 if `<NOSQLDATABASE>` is CASSANDRA :
 - Data model location : target `table`must be defined.
 - Data location : nothing has to be defined.
-```
+```json
 {
   "model" : {
-    "table" : "&lt;TABLE_NAME&gt;"
+    "table" : "<TABLE_NAME>"
   }
 }
 ```
@@ -140,16 +138,16 @@ if `<NOSQLDATABASE>` is CASSANDRA :
 if `<NOSQLDATABASE>` is COUCHBASE :
 - Data model location : target `bucket`,`scope`and `collection`must be defined.
 - Data location : target `bucket`and `scope` must be defined.
-```
+```json
 {
   "data" : {
-    "bucket" : "&lt;TARGET_BUCKET&gt;",
-    "scope" : "&lt;TARGET_SCOPE&gt;"
+    "bucket" : "<TARGET_BUCKET>",
+    "scope" : "<TARGET_SCOPE>"
   },
   "model" : {
-    "bucket" : "&lt;TARGET_BUCKET&gt;",
-    "scope" : "&lt;TARGET_SCOPE&gt;",
-    "collection" : "&lt;TARGET_COLLECTION&gt;"
+    "bucket" : "<TARGET_BUCKET>",
+    "scope" : "<TARGET_SCOPE>",
+    "collection" : "<TARGET_COLLECTION>"
   }
 }
 ```
@@ -157,10 +155,10 @@ if `<NOSQLDATABASE>` is COUCHBASE :
 if `<NOSQLDATABASE>` is MONGODB :
 - Data model location : target `collection`must be defined.
 - Data location : nothing has to be defined.
-```
+```json
 {
   "model" : {
-    "collection" : "&lt;COLLECTION_NAME&gt;"
+    "collection" : "<COLLECTION_NAME>"
   }
 }
 ```
@@ -169,10 +167,10 @@ if `<NOSQLDATABASE>` is MONGODB :
 
 This properties file describes the connection properties necessary to connect to a source, to which connectionName label will be attached to.
 
-```
-connectionName=&lt;connectionName&gt;
-connectionType=&lt;streamsListedConnectionType&gt;
-&lt;additional parameters&gt;
+```json
+connectionName=<connectionName>
+connectionType=<streamsListedConnectionType>
+<additional parameters>
 ```
 
 `<additional parameters>` depends on the data source type. Refer to `CONNECTIONS.md`for their values.
@@ -186,17 +184,17 @@ its content depends on the data source type. Refer to `CONNECTIONS.md`for it's d
 
 ### `<project folder>/`config/`<connectionName>`.stream.`<streamName>`.json
 
-```
+```json
 {
-    &lt;specific sections&gt;
+    <specific sections>
     "columns" : [
-        &lt;List of "column" :{column definition}&gt;
+        <List of "column" :{column definition}>
     ],
     "create" : [
-        &lt;List of {object creation definition}&gt;
+        <List of {object creation definition}>
     ],
     "uptate" : [
-        &lt;List of {object update definition}&gt;
+        <List of {object update definition}>
     ]
 }
 ```
@@ -204,13 +202,13 @@ its content depends on the data source type. Refer to `CONNECTIONS.md`for it's d
 
 ### `<project folder>/`config/glossary.`<glossaryLocalUniqueName>`.json
 
-```
+```json
 {
     "entries" : [
-        &lt;List of "entry" :{entry definition}&gt;
+        <List of "entry" :{entry definition}>
     ],
     "rules" : [
-        &lt;List of "rules" :{rules definition}&gt;
+        <List of "rules" :{rules definition}>
     ]
 }
 ```

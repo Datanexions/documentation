@@ -38,7 +38,6 @@ Delete all unnecessary classes for a simple connector. Keep only:
 - a configuration class (optional)
 - the future HubSpotConnector.java class
 
-⸻
 
 ## Step 4 — Add HTTP Dependency
 

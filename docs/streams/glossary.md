@@ -6,18 +6,18 @@
 - at environment level (applies to all projects)
 - at projet level (to be used only by project streams)
 
-```
-<environment folder>/
-    config/
-        glossary.<globalLabel>.json
-<project folder>/
-    config/
-        glossary.<localLabel>.json
+```text
+├── <environment folder>/
+│   └── config/
+│       └── glossary.<globalLabel>.json
+└── <project folder>/
+    └── config/
+        └── glossary.<localLabel>.json
 ```
 
 This is the global content of a glossary file :
 
-```
+```json
 {
   "entries": [
     {

@@ -4,7 +4,7 @@
 
 `<project folder>/config/<connectionName>.connection.json` file contains the connection properties necessary to connect to a data source, labeled `<connectionName>`.
 
-```
+```json
 {
     "connectionName" : "<userDefinedConnectionName>",
     "connectionType" : "<streamsTypeOfConnection>",
@@ -24,7 +24,7 @@
 ### Flat Files
 
 The following configuration connects to a **flat file source**, such as CSV, JSON, or other text-based data formats. These files are stored either **locally** on a file system or in an **S3-compatible storage** (e.g., AWS S3, MinIO). The configuration specifies the **folder path or bucket location** where the files are located.
-```
+```json
 {
   "connectionName": "<userDefinedConnectionName>",
   "connectionType": "files",
@@ -38,7 +38,7 @@ The following configuration connects to a **flat file source**, such as CSV, JSO
 
 The following configuration connects to a **structured flat file source** that contains **multiple tables** within a single file (e.g., delimited text files representing relational tables). Unlike standard flat files, these **database-like files** require additional processing to extract and structure data correctly. The configuration specifies the **location of the files and their format**.
 
-```
+```json
 {
   "connectionName": "<userDefinedConnectionName>",
   "connectionType": "databaseFiles",
@@ -51,7 +51,7 @@ The following configuration connects to a **structured flat file source** that c
 ### SQL Database
 The following configuration connects to a **relational SQL database**, such as **PostgreSQL, MySQL, Microsoft SQL Server, Oracle, or Snowflake**. It requires a **JDBC connection URL**, along with the **database name, user credentials, and server address**. This connection type is used to retrieve structured data stored in **tables** with defined **schemas, primary keys, and foreign key relationships**.
 
-```
+```json
 {
   "connectionName": "<userDefinedConnectionName>",
   "connectionType": "database",
@@ -65,7 +65,7 @@ The following configuration connects to a **relational SQL database**, such as *
 
 The following configuration connects to a **MongoDB NoSQL database**, which stores data as **JSON-like documents** instead of structured tables. This type of connection is suited for **semi-structured or unstructured data** with flexible schemas. The configuration includes **the MongoDB server URL, database name, and user authentication details**.
 
-```
+```json
 {
   "connectionName": "<userDefinedConnectionName>",
   "connectionType": "noSQL",
@@ -81,7 +81,7 @@ The following configuration connects to a **MongoDB NoSQL database**, which stor
 
 The following configuration connects to **Apache Cassandra**, a highly scalable, distributed NoSQL database designed for **high availability and large-scale data storage**. Unlike relational databases, Cassandra uses **column families and partitions** instead of tables and rows. The configuration specifies the **Cassandra cluster contact points, datacenter name, keyspace, authentication credentials, and port number**.
 
-```
+```json
 {
   "connectionName": "<userDefinedConnectionName>",
   "connectionType": "noSQL",
@@ -99,7 +99,7 @@ The following configuration connects to **Apache Cassandra**, a highly scalable,
 
 The following configuration connects to a **REST API endpoint**, allowing Streams to **extract data from web services**. This type of connection is used when data is **available via an HTTP API** rather than a database or file. The configuration includes the **API URL, authentication method (e.g., OAuth2, API key), and credentials**. This is useful for integrating with **external data providers, SaaS applications, or internal microservices**.
 
-```
+```json
 {
   "connectionName": "<userDefinedConnectionName>",
   "connectionType": "restAPI",
@@ -118,7 +118,7 @@ The following configuration connects to a **REST API endpoint**, allowing Stream
 files and databases files may be located either on the server's file system (local file system), or on an S3/S3-compatible bucket.
 These are the `<location parameters>` to be added in the configuration file :
 - **localhost**
-```
+```json
 {
   ...
   "connectionLocation": "localhost",
@@ -126,7 +126,7 @@ These are the `<location parameters>` to be added in the configuration file :
 }
 ```
 - **S3/Minio**
-```
+```json
 {
   ...
   "connectionLocation": "minio",
