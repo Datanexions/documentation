@@ -15,102 +15,81 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-   streamsSidebar: [
-      //
-      // 01. INTRODUCTION (pas de sous-menu)
-      //
-      {
-        type: 'doc',
-        id: 'streams/Introduction/intro',
-        label: 'Introduction',
-      },
+  streamsSidebar: [
+    //
+    // 01. INTRODUCTION
+    //
+    {
+      type: 'doc',
+      id: 'streams/Introduction/intro',
+      label: 'Introduction',
+    },
 
-      //
-      // 02. INSTALLATION
-      //
-      {
-        type: 'category',
-        label: 'Installation',
-        collapsed: false,
-        items: [
-          'streams/Installation/Requirements/requirements',
-          'streams/Installation/Quick-Start/quick-start',
-        ],
-      },
+    //
+    // 02. INSTALLATION
+    //
+    {
+      type: 'category',
+      label: 'Installation',
+      collapsed: false,
+      items: [
+        'streams/Installation/Requirements/requirements',
+        'streams/Installation/Quick-Start/quick-start',
+      ],
+    },
 
-      //
-      // 03. CONFIGURATION
-      //
-      {
-        type: 'category',
-        label: 'Configuration',
-        collapsed: false,
-        items: [
-          // docs de niveau 1
-          'streams/Configuration/Overview/overview',
-          'streams/Configuration/Connections/connections',
-          'streams/Configuration/Scope/scope',
+    //
+    // 03. ENVIRONMENT
+    //
+    {
+      type: 'category',
+      label: 'Environment',
+      collapsed: false,
+      items: [
+        // docs de niveau 1
+        'streams/Environment/Overview/overview',
+        'streams/Environment/Glossary/glossary',
 
-          // sous-catégorie Streams
-          {
-            type: 'category',
-            label: 'Streams',
-            collapsed: true,
-            items: [
-              {
-                type: 'doc',
-                id: 'streams/Configuration/Streams/Streams-Design-Overview/stream-design-overview',
-                label: 'Streams Design Overview',
-              },
-              {
-                type: 'doc',
-                id: 'streams/Configuration/Streams/Columns-Section/columns-section',
-                label: 'Columns Section',
-              },
-              {
-                type: 'doc',
-                id: 'streams/Configuration/Streams/Lookups/lookups',
-                label: 'Lookups',
-              },
-              {
-                type: 'doc',
-                id: 'streams/Configuration/Streams/Conditions/conditions',
-                label: 'Conditions',
-              },
-              {
-                type: 'doc',
-                id: 'streams/Configuration/Streams/Create-Operations/create-operations',
-                label: 'Create Operations',
-              },
-              {
-                type: 'doc',
-                id: 'streams/Configuration/Streams/Update-Operations/update-operations',
-                label: 'Update Operations',
-              },
-            ],
-          },
-        ],
-      },
+        // sous-catégorie Project
+        {
+          type: 'category',
+          label: 'Project',
+          collapsed: false,
+          items: [
+            'streams/Environment/Project/Connections/connections',
+            'streams/Environment/Project/Scope/scope',
 
-      //
-      // 04. GLOSSARY
-      //
-      {
-        type: 'doc',
-        id: 'streams/Glossary/glossary',
-        label: 'Glossary',
-      },
+            // sous-catégorie Streams
+            {
+              type: 'category',
+              label: 'Streams',
+              collapsed: true,
+              items: [
+                // attention : cet id n’a PAS le dossier "Streams" dans le chemin
+                'streams/Environment/Project/Streams-Design-Overview/stream-design-overview',
 
-      //
-      // 05. TROUBLESHOOTING
-      //
-      {
-        type: 'doc',
-        id: 'streams/Troubleshooting/troubleshooting',
-        label: 'Troubleshooting',
-      },
-    ],
+                'streams/Environment/Project/Streams/Columns-Section/columns-section',
+                'streams/Environment/Project/Streams/Conditions/conditions',
+                'streams/Environment/Project/Streams/Content/Formulas/formulas',
+                'streams/Environment/Project/Streams/Create-Operations/create-operations',
+                'streams/Environment/Project/Streams/Update-Operations/update-operations',
+                'streams/Environment/Project/Streams/Lookups/lookups',
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    //
+    // 04. TROUBLESHOOTING
+    //
+    {
+      type: 'doc',
+      id: 'streams/Troubleshooting/troubleshooting',
+      label: 'Troubleshooting',
+    },
+  ],
 
   streams2Sidebar: [
     {
