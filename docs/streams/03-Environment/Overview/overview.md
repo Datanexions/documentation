@@ -52,3 +52,92 @@ We will call `<environmentFolderPath>` the full file system path to that folder,
 - **`target.connection.json`**: It contains detailed settings for connecting to the target database.
 - **`<project n folder>/`**: Those folders holds Streams content regarding a functional subset of your data journey for the target database.
 - **`project.json`**: The configuration file for the (buckets, scopes and collections)/(databases, instances and tables)/etc in the target database, for storing metadata (data models) and data.
+
+---
+
+# Environment Configuration
+
+
+## environment.json
+
+Defines the target database type for your Streams environment.
+
+**Location**: `{environment-folder}/environment.json`
+
+---
+
+## Structure
+
+```json
+{
+  "TARGET_DATABASE": {
+    "DATABASE_TYPE": "NOSQL",
+    "DATABASE_NAME": "COUCHBASE"
+  }
+}
+```
+
+---
+
+## Configuration Options
+
+### DATABASE_TYPE
+
+**Value**: `"NOSQL"`
+
+Currently, only NoSQL databases are supported.
+
+### DATABASE_NAME
+
+**Supported Values**:
+- `"COUCHBASE"`
+- `"MONGODB"`
+- `"CASSANDRA"`
+
+---
+
+## Examples
+
+### Couchbase
+
+```json
+{
+  "TARGET_DATABASE": {
+    "DATABASE_TYPE": "NOSQL",
+    "DATABASE_NAME": "COUCHBASE"
+  }
+}
+```
+
+### MongoDB
+
+```json
+{
+  "TARGET_DATABASE": {
+    "DATABASE_TYPE": "NOSQL",
+    "DATABASE_NAME": "MONGODB"
+  }
+}
+```
+
+### Cassandra
+
+```json
+{
+  "TARGET_DATABASE": {
+    "DATABASE_TYPE": "NOSQL",
+    "DATABASE_NAME": "CASSANDRA"
+  }
+}
+```
+
+---
+
+## Usage
+
+This file is read at the beginning of every Streams operation to determine:
+- How to interpret `target.connection.json`
+- How to structure `project.json`
+- Which database driver to use
+
+---
