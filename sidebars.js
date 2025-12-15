@@ -58,6 +58,7 @@ const sidebars = {
           items: [
             'streams/Environment/Project/Connections/connections',
             'streams/Environment/Project/Scope/scope',
+            'streams/Environment/Project/Output-Config/output-config',
 
             // sous-catégorie Streams
             {
@@ -73,6 +74,7 @@ const sidebars = {
                 'streams/Environment/Project/Streams/Content/Formulas/formulas',
                 'streams/Environment/Project/Streams/Create-Operations/create-operations',
                 'streams/Environment/Project/Streams/Update-Operations/update-operations',
+                'streams/Environment/Project/Streams/Aggregate/aggregate',
                 'streams/Environment/Project/Streams/Lookups/lookups',
               ],
             },

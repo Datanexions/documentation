@@ -115,7 +115,7 @@ Here are some example commands for running the application with command lines:
    ```bash
    java -jar streams-2.0-cli.jar -e <environmentFolderPath> -p <projectFolderName> -lineage
 
-# AI Assisted Session
+# AI Assisted Session (WIP)
 
 ## Generic Usage
 

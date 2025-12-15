@@ -31,7 +31,25 @@ The following configuration connects to a **flat file source**, such as CSV, JSO
   "...": "<location parameters>"
 }
 ```
+### Excel Files Source
 
+The following configuration connects to a folder containing **Excel input files**.  
+These files may be used as a source when defining scopes and streams.
+This connection is optional: it is only required when the project uses Excel input files stored locally in the `inputFiles/` folder.
+
+```json
+{
+  "connectionName": "<userDefinedConnectionName>",
+  "connectionType": "files",
+  "connectionLocation": "localhost",
+  "folderPath": "/absolute/path/to/project/inputFiles"
+}
+```
+Notes:
+- `connectionType: "files"` applies to Excel.
+- The `folderPath` points to the location where `.xlsx`/`.xls` files are stored.
+- Relative paths are not recommended; use absolute paths when possible.
+        
 `<location parameters>` : cf. `Location of files and databasefiles`section for details.
 
 ### Database Flat Files
@@ -150,6 +168,3 @@ These are the `<location parameters>` to be added in the configuration file :
 | database            | Connects to SQL databases (PostgreSQL, SQL Server, etc.) | url, username, password        |
 | noSQL               | Connects to NoSQL databases (MongoDB, Cassandra)         | databaseName, contactPoints    |
 | restAPI             | Retrieves data from REST API endpoints                   | url, authentication            |
-
-## Support
-For any issues, questions, or feedback, please contact the **Datanexions support team** at [support@datanexions.com](mailto:support@datanexions.com).
