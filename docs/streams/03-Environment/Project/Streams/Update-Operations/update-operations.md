@@ -260,7 +260,6 @@ Supported: sum, avg, count
     }
   ]
 }
-
 ```
 
 This adds:
