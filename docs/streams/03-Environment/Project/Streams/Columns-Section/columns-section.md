@@ -54,19 +54,4 @@ List every column referenced in create/update sections:
 
 Column orders must match the scope file exactly.
 
-<<<<<<< HEAD
-=======
-### Use Glossary References
-
-Link to glossary for governance:
-
-```json
-{
-  "column": "firstName",
-  "order": 2,
-  "reference": "glossary.person.firstName"
-}
-```
-
->>>>>>> 5a646064a49636b52fd0636d8ba67aebc09df47b
 ---
