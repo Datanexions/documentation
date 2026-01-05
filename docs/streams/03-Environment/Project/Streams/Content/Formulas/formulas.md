@@ -1,7 +1,5 @@
 # Formulas
 
-[← Previous: Update Operations](update-operations.md) | [Next: Aggregations →](aggregations.md)
-
 ---
 
 ## Formula Syntax

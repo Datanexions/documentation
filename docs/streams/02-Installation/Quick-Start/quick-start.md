@@ -349,10 +349,4 @@ Try these enhancements:
 3. **Arrays**: Create orders with line items
 4. **Updates**: Add fields from another stream
 
-### Learn More
-
-- [Core Concepts](../02-core-concepts/architecture.md) - Understand the architecture
-- [Stream Design](../04-stream-design/overview.md) - Learn stream configuration
-- [Examples](../07-examples/example-excel-to-couchbase.md) - See complete examples
-
 ---

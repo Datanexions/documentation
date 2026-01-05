@@ -168,3 +168,5 @@ These are the `<location parameters>` to be added in the configuration file :
 | database            | Connects to SQL databases (PostgreSQL, SQL Server, etc.) | url, username, password        |
 | noSQL               | Connects to NoSQL databases (MongoDB, Cassandra)         | databaseName, contactPoints    |
 | restAPI             | Retrieves data from REST API endpoints                   | url, authentication            |
+
+---

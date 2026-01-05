@@ -138,3 +138,5 @@ The following table lists the available prompt session options:
 ### Notes
 - When launching an execution, `-p` option is mandatory and specifies the project directory.
 - Then, you must use exclusive options as needed, e.g., `-model`, `-load` and `-load`.
+
+---

@@ -1,6 +1,4 @@
 # Overview
-id: intro
-[→ Next: Installation](../02-Installation/Requirements/requirements.md)
 
 ---
 

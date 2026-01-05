@@ -213,3 +213,5 @@ Logical result:
 - Assign unique `index` values
 - Build the `logic` tree
 - Validate final logical expression
+
+---
