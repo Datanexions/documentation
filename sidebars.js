@@ -93,6 +93,45 @@ const sidebars = {
     },
   ],
 
+  streamsWebSidebar: [
+      {
+        type: 'doc',
+        id: 'streamsweb/settings',
+        label: 'Settings',
+      },
+      {
+        type: 'doc',
+        id: 'streamsweb/domains',
+        label: 'Domains',
+      },
+      {
+        type: 'doc',
+        id: 'streamsweb/glossaries',
+        label: 'Glossaries',
+      },
+      {
+        type: 'doc',
+        id: 'streamsweb/design',
+        label: 'Design',
+      },
+      {
+        type: 'doc',
+        id: 'streamsweb/objects',
+        label: 'Objects',
+      },
+      {
+        type: 'doc',
+        id: 'streamsweb/lineage',
+        label: 'Lineage',
+      },
+      {
+        type: 'doc',
+        id: 'streamsweb/analytics',
+        label: 'Analytics',
+      },
+    ],
+
+
   streams2Sidebar: [
     {
       type: 'category',
