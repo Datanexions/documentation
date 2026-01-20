@@ -10,8 +10,8 @@
 
 ## Object Instances
 
-![Analytics – écran 2](../screenshots/analytics/Capture%20d’écran%202026-01-16%20à%2016.30.44.png)
+![Analytics – écran 3](../screenshots/analytics/Capture%20d’écran%202026-01-16%20à%2016.30.44.png)
 
 ## Data Quality Issues
 
-![Analytics – écran 2](../screenshots/analytics/Capture%20d’écran%202026-01-16%20à%2016.31.35.png)
+![Analytics – écran 4](../screenshots/analytics/Capture%20d’écran%202026-01-16%20à%2016.31.35.png)
