@@ -94,42 +94,37 @@ const sidebars = {
   ],
 
   streamsWebSidebar: [
-      {
-        type: 'doc',
-        id: 'streamsweb/settings',
-        label: 'Settings',
-      },
-      {
-        type: 'doc',
-        id: 'streamsweb/domains',
-        label: 'Domains',
-      },
-      {
-        type: 'doc',
-        id: 'streamsweb/glossaries',
-        label: 'Glossaries',
-      },
-      {
-        type: 'doc',
-        id: 'streamsweb/design',
-        label: 'Design',
-      },
-      {
-        type: 'doc',
-        id: 'streamsweb/objects',
-        label: 'Objects',
-      },
-      {
-        type: 'doc',
-        id: 'streamsweb/lineage',
-        label: 'Lineage',
-      },
-      {
-        type: 'doc',
-        id: 'streamsweb/analytics',
-        label: 'Analytics',
-      },
-    ],
+    {
+      type: "doc",
+      id: "streamsweb/Intro/introweb",
+      label: "Introduction",
+    },
+    {
+      type: "category",
+      label: "Settings",
+      collapsed: false,
+      items: [
+        "streamsweb/settings/settings",
+        "streamsweb/settings/environment",
+        "streamsweb/settings/source",
+        "streamsweb/settings/project",
+      ],
+    },
+    {
+      type: "category",
+      label: "Data lifecycle",
+      collapsed: false,
+      items: [
+        "streamsweb/datalifecycle/domains",
+        "streamsweb/datalifecycle/glossaries",
+        "streamsweb/datalifecycle/design",
+        "streamsweb/datalifecycle/objects",
+        "streamsweb/datalifecycle/lineage",
+        "streamsweb/datalifecycle/analytics",
+      ],
+    },
+  ],
+
 
 
   streams2Sidebar: [
